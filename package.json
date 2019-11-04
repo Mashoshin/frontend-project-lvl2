@@ -1,0 +1,31 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Compares two configuration files and shows a difference",
+  "bin": {
+    "gendiff": "dist/bin/gendiff.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mashoshin/frontend-project-lvl2.git"
+  },
+  "author": "Mashoshin Evgeniy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mashoshin/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/Mashoshin/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3"
+  }
+}
