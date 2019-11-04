@@ -1,0 +1,19 @@
+
+---
+
+plugins:
+  - babel
+
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
+env:
+  node: true
+
+
+parser: babel-eslint
+
+extends:
+  - 'airbnb-base'
+ 
+
+rules:
+  no-console: 0
