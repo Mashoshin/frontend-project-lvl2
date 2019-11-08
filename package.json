@@ -2,10 +2,10 @@
   "name": "project2",
   "version": "1.0.0",
   "description": "Compares two configuration files and shows a difference",
-  "bin": {
-    "gendiff": "dist/bin/gendiff.js"
-  },
   "main": "index.js",
+  "bin": {
+    "gendiff": "/.dist/bin/gendiff.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
@@ -23,13 +23,14 @@
   },
   "homepage": "https://github.com/Mashoshin/frontend-project-lvl2#readme",
   "dependencies": {
-    "commander": "^4.0.0"
+    "commander": "^4.0.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",

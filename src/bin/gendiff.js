@@ -1,12 +1,18 @@
-#!/usr/bin/env node
+#!/usr/local/bin/node
 
-const program = require('commander');
+import { Command } from 'commander';
+import genDiff from '..';
+
+const program = new Command();
 
 program
-  .version('0.0.1')
   .description('Compares two configuration files and shows a difference.')
+  .version('0.0.1')
+  .option('-f, --format [type]', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
-  .action()
-  .option('-f, --format [type]', 'Output format');
+  .action((firstConfig, secondConfig) => {
+    const diff = genDiff(firstConfig, secondConfig);
+    console.log(diff);
+  });
 
 program.parse(process.argv);
