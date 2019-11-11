@@ -6,3 +6,6 @@
 
 ## Compare flat JSON
 [![asciicast](https://asciinema.org/a/xPvA3awrhBoUJqXgkxVPvNJJK.svg)](https://asciinema.org/a/xPvA3awrhBoUJqXgkxVPvNJJK)
+
+## Compare flat YAML
+[![asciicast](https://asciinema.org/a/NZ0FJ6N5zoBDkCZ8bItkLg29u.svg)](https://asciinema.org/a/NZ0FJ6N5zoBDkCZ8bItkLg29u)

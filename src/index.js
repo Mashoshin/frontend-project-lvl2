@@ -1,11 +1,9 @@
-import fs from 'fs';
 import _ from 'lodash';
+import parse from './parser';
 
 const genDiff = (path1, path2) => {
-  const data1 = fs.readFileSync(path1, 'utf8');
-  const data2 = fs.readFileSync(path2, 'utf8');
-  const obj1 = JSON.parse(data1);
-  const obj2 = JSON.parse(data2);
+  const obj1 = parse(path1);
+  const obj2 = parse(path2);
   const allUniqKeyses = _.union(Object.keys(obj1), Object.keys(obj2));
   const resultObj = allUniqKeyses.reduce((acc, key) => {
     if (_.has(obj1, key) && _.has(obj2, key)) {
