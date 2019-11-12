@@ -9,3 +9,6 @@
 
 ## Compare flat YAML
 [![asciicast](https://asciinema.org/a/NZ0FJ6N5zoBDkCZ8bItkLg29u.svg)](https://asciinema.org/a/NZ0FJ6N5zoBDkCZ8bItkLg29u)
+
+## Compare flat INI
+[![asciicast](https://asciinema.org/a/tPTN4A9yZWC8lzcZupwG98tc3.svg)](https://asciinema.org/a/tPTN4A9yZWC8lzcZupwG98tc3)

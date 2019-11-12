@@ -1,13 +1,18 @@
 import fs from 'fs';
+import path from 'path';
 import genDiff from '../src';
 
-const diffAtoB = fs.readFileSync(`${__dirname}/__fixtures__/result.txt`, 'utf-8');
-const diffForYml = fs.readFileSync(`${__dirname}/__fixtures__/resultForYml.txt`, 'utf-8');
+const commonPath = `${__dirname}/__fixtures__/`;
 
-test('compare two JSON files', () => {
-  expect(genDiff(`${__dirname}/__fixtures__/before.json`, `${__dirname}/__fixtures__/after.json`)).toEqual(diffAtoB);
-});
+const data = [
+  ['before.json', 'after.json', 'resultForJson.txt'],
+  ['before.yml', 'after.yml', 'resultForJson.txt'],
+  ['before.ini', 'after.ini', 'resultForJson.txt'],
+];
 
-test('compare two YML files', () => {
-  expect(genDiff(`${__dirname}/__fixtures__/before.yml`, `${__dirname}/__fixtures__/after.yml`)).toEqual(diffForYml);
+test.each(data)('compare two files(%s, %s)', (path1, path2, expected) => {
+  const pathToFirst = path.join(commonPath, path1);
+  const pathToSecond = path.join(commonPath, path2);
+  const correctAnswer = fs.readFileSync(path.join(commonPath, expected), 'utf-8');
+  expect(genDiff(pathToFirst, pathToSecond)).toEqual(correctAnswer);
 });
