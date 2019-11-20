@@ -5,9 +5,9 @@ import genDiff from '../src';
 const commonPath = `${__dirname}/__fixtures__/`;
 
 const data = [
-  ['before.json', 'after.json', 'resultForJson.txt'],
-  ['before.yml', 'after.yml', 'resultForJson.txt'],
-  ['before.ini', 'after.ini', 'resultForJson.txt'],
+  ['nestedBefore.json', 'nestedAfter.json', 'resultForNested.txt'],
+  ['nestedBefore.yml', 'nestedAfter.yml', 'resultForNested.txt'],
+  ['nestedBefore.ini', 'nestedAfter.ini', 'resultForNested.txt'],
 ];
 
 test.each(data)('compare two files(%s, %s)', (path1, path2, expected) => {

@@ -12,3 +12,12 @@
 
 ## Compare flat INI
 [![asciicast](https://asciinema.org/a/tPTN4A9yZWC8lzcZupwG98tc3.svg)](https://asciinema.org/a/tPTN4A9yZWC8lzcZupwG98tc3)
+
+## Compare nested JSON
+[![asciicast](https://asciinema.org/a/mtevN3m5eqV1NKd37JO6rGZCp.svg)](https://asciinema.org/a/mtevN3m5eqV1NKd37JO6rGZCp)
+
+## Compare nested YML
+[![asciicast](https://asciinema.org/a/DoWncBw77fBSMnMcyy0B7ESwD.svg)](https://asciinema.org/a/DoWncBw77fBSMnMcyy0B7ESwD)
+
+## Compare nested INI
+[![asciicast](https://asciinema.org/a/whwJqlNirB71DgrrD37C0RDwB.svg)](https://asciinema.org/a/whwJqlNirB71DgrrD37C0RDwB)
