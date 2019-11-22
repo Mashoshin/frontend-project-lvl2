@@ -21,3 +21,6 @@
 
 ## Compare nested INI
 [![asciicast](https://asciinema.org/a/whwJqlNirB71DgrrD37C0RDwB.svg)](https://asciinema.org/a/whwJqlNirB71DgrrD37C0RDwB)
+
+## Plain output format
+[![asciicast](https://asciinema.org/a/6Uldmj9B8w0wmVgYmR9byqB91.svg)](https://asciinema.org/a/6Uldmj9B8w0wmVgYmR9byqB91)

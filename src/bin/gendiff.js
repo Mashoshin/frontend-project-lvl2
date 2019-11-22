@@ -11,7 +11,7 @@ program
   .option('-f, --format [type]', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
   .action((firstConfig, secondConfig) => {
-    const diff = genDiff(firstConfig, secondConfig);
+    const diff = genDiff(firstConfig, secondConfig, program.format);
     console.log(diff);
   });
 
