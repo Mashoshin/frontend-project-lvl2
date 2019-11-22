@@ -11,6 +11,9 @@ const data = [
   ['nestedBefore.json', 'nestedAfter.json', 'resultForPlain.txt', 'plain'],
   ['nestedBefore.yml', 'nestedAfter.yml', 'resultForPlain.txt', 'plain'],
   ['nestedBefore.ini', 'nestedAfter.ini', 'resultForPlain.txt', 'plain'],
+  ['nestedBefore.json', 'nestedAfter.json', 'resultForJson.txt', 'json'],
+  ['nestedBefore.yml', 'nestedAfter.yml', 'resultForJson.txt', 'json'],
+  ['nestedBefore.ini', 'nestedAfter.ini', 'resultForJson.txt', 'json'],
 ];
 
 test.each(data)('compare two files(%s, %s)', (path1, path2, expected, format) => {

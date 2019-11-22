@@ -24,3 +24,6 @@
 
 ## Plain output format
 [![asciicast](https://asciinema.org/a/6Uldmj9B8w0wmVgYmR9byqB91.svg)](https://asciinema.org/a/6Uldmj9B8w0wmVgYmR9byqB91)
+
+## Json output format 
+[![asciicast](https://asciinema.org/a/1Zauli4eu4R4LKsJiRjf76I5W.svg)](https://asciinema.org/a/1Zauli4eu4R4LKsJiRjf76I5W)
