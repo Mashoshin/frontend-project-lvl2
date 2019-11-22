@@ -35,7 +35,7 @@ const getPropertyAction = (property) => propertyActions.find(({ check }) => chec
 const renderPlain = (ast) => {
   const iter = (astree, deepLevel = '') => {
     const result = astree.map((node) => {
-      const currentPath = deepLevel === '' ? `${node.name}` : `${deepLevel}.${node.name}`;  
+      const currentPath = deepLevel === '' ? `${node.name}` : `${deepLevel}.${node.name}`;
       const { process } = getPropertyAction(node);
       return process(node, currentPath, iter);
     });
