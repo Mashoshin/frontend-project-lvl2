@@ -11,7 +11,7 @@ const makeNode = (name, beforeValue, afterValue, children, type) => {
   return node;
 };
 
-const propertyActions = [
+const nodeTypes = [
   {
     type: 'nested',
     check: (obj1, obj2, key) => _.has(obj1, key) && _.has(obj2, key)
@@ -42,18 +42,18 @@ const propertyActions = [
   },
 ];
 
-const getPropertyAction = (obj1, obj2, key) => propertyActions.find(({ check }) => {
+const getPropertyAction = (obj1, obj2, key) => nodeTypes.find(({ check }) => {
   const result = check(obj1, obj2, key);
   return result;
 });
 
-const ast = (obj1, obj2) => {
+const buildAst = (obj1, obj2) => {
   const allUniqKeyses = _.union(Object.keys(obj1), Object.keys(obj2));
-  const res = allUniqKeyses.reduce((acc, key) => {
+  const result = allUniqKeyses.reduce((acc, key) => {
     const { process } = getPropertyAction(obj1, obj2, key);
-    return [...acc, process(obj1, obj2, key, ast)];
+    return [...acc, process(obj1, obj2, key, buildAst)];
   }, []);
-  return res;
+  return result;
 };
 
-export default ast;
+export default buildAst;

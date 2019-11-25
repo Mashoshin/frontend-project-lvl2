@@ -7,7 +7,7 @@ const stringify = (parameter) => {
   return '[complex value]';
 };
 
-const propertyActions = [
+const nodeTypes = [
   {
     check: (node) => node.type === 'unchanged',
     process: () => '',
@@ -30,12 +30,12 @@ const propertyActions = [
   },
 ];
 
-const getPropertyAction = (property) => propertyActions.find(({ check }) => check(property));
+const getPropertyAction = (property) => nodeTypes.find(({ check }) => check(property));
 
 const renderPlain = (ast) => {
-  const iter = (astree, deepLevel = '') => {
+  const iter = (astree, path = '') => {
     const result = astree.map((node) => {
-      const currentPath = deepLevel === '' ? `${node.name}` : `${deepLevel}.${node.name}`;
+      const currentPath = path === '' ? `${node.name}` : `${path}.${node.name}`;
       const { process } = getPropertyAction(node);
       return process(node, currentPath, iter);
     });
