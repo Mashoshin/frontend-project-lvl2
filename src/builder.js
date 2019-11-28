@@ -13,30 +13,25 @@ const makeNode = (name, beforeValue, afterValue, children, type) => {
 
 const nodeTypes = [
   {
-    type: 'nested',
     check: (obj1, obj2, key) => _.has(obj1, key) && _.has(obj2, key)
     && _.isObject(obj1[key]) && _.isObject(obj2[key]),
     process: (obj1, obj2, key, fn) => makeNode(key, {}, {}, fn(obj1[key], obj2[key]), 'nested'),
   },
   {
-    type: 'unchanged',
     check: (obj1, obj2, key) => _.has(obj1, key) && _.has(obj2, key)
     && (obj1[key] === obj2[key]),
     process: (obj1, obj2, key) => makeNode(key, obj1[key], obj2[key], [], 'unchanged'),
   },
   {
-    name: 'changed',
     check: (obj1, obj2, key) => _.has(obj1, key) && _.has(obj2, key)
     && (obj1[key] !== obj2[key]),
     process: (obj1, obj2, key) => makeNode(key, obj1[key], obj2[key], [], 'changed'),
   },
   {
-    name: 'added',
     check: (obj1, obj2, key) => !_.has(obj1, key) && _.has(obj2, key),
     process: (obj1, obj2, key) => makeNode(key, {}, obj2[key], [], 'added'),
   },
   {
-    name: 'deleted',
     check: (obj1, obj2, key) => _.has(obj1, key) && !_.has(obj2, key),
     process: (obj1, obj2, key) => makeNode(key, obj1[key], {}, [], 'deleted'),
   },
