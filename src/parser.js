@@ -1,5 +1,4 @@
 import yaml from 'js-yaml';
-import path from 'path';
 import ini from 'ini';
 
 const parsers = {
@@ -8,9 +7,6 @@ const parsers = {
   '.ini': ini.parse,
 };
 
-const getParser = (pathToFile) => {
-  const currentFormat = path.extname(pathToFile);
-  return parsers[currentFormat];
-};
+const getParser = (dataType) => parsers[dataType];
 
 export default getParser;

@@ -39,10 +39,10 @@ const nodeTypes = [
 
 const buildAst = (obj1, obj2) => {
   const allUniqKeyses = _.union(Object.keys(obj1), Object.keys(obj2));
-  const result = allUniqKeyses.reduce((acc, key) => {
+  const result = allUniqKeyses.map((key) => {
     const { process } = nodeTypes.find(({ check }) => check(obj1, obj2, key));
-    return [...acc, process(obj1, obj2, key, buildAst)];
-  }, []);
+    return process(obj1, obj2, key, buildAst);
+  });
   return result;
 };
 

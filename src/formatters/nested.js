@@ -7,7 +7,7 @@ const stringify = (parameter, deepLevel = 0) => {
     return `${parameter}`;
   }
   const nextDeepLevel = deepLevel + 1;
-  const result = _.toPairs(parameter).map((el) => `${space.repeat(nextDeepLevel)}${el[0]}: ${stringify(el[1], nextDeepLevel)}`);
+  const result = _.toPairs(parameter).map(([key, value]) => `${space.repeat(nextDeepLevel)}${key}: ${stringify(value, nextDeepLevel)}`);
   return `{\n${result.join('\n')}\n${space.repeat(deepLevel)}}`;
 };
 
